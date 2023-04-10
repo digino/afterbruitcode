@@ -2,7 +2,7 @@
 export default {
     props: {
         customMargin: Number, //marge personnalisée à passer directement
-        imageWidth: Number, //largeur de l'image (utilisé pour les calculs)
+        imageWidth:  Number, //largeur de l'image (utilisé pour les calculs)
         pictureData: Object,
     },
     computed: {
@@ -20,10 +20,10 @@ export default {
 </script>
 
 <template>
-    <div role="img" class="picture_class max-h-72 overflow-hidden rounded-lg" :style="pictureStyles">
+    <div role="img" class="picture_class max-h-80 overflow-hidden rounded-lg" :style="pictureStyles">
         <div class="picture_container">
             <div class="picture_wrapper">
-                <img class="object-cover" :src="pictureData.largeImageURL" :alt="pictureData.user">
+                <img class="object-cover w-full h-full" :src="pictureData.url" :alt="pictureData.user">
             </div>
         </div>
     </div>

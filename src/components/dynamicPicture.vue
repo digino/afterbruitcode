@@ -21,11 +21,7 @@ export default {
 
 <template>
     <div role="img" class="picture_class max-h-80 overflow-hidden rounded-lg" :style="pictureStyles">
-        <div class="picture_container">
-            <div class="picture_wrapper">
-                <img class="object-cover w-full h-full" :src="pictureData.url" :alt="pictureData.user">
-            </div>
-        </div>
+        <img class="object-cover w-full h-full" :src="pictureData.url" :alt="pictureData.user">
     </div>
 </template>
 
@@ -44,6 +40,13 @@ export default {
 @media (max-width:1023px) {
     .picture_class {
         flex-basis: var(--picFlexBasisMd);
+    }
+}
+
+
+@media (min-width:1200px) {
+    .picture_class {
+        max-width: calc(100%/3);
     }
 }
 </style>

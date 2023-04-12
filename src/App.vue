@@ -19,6 +19,8 @@ export default {
         { "id": "8", "url": "https://picsum.photos/450/300", "width": 450 },
         { "id": "9", "url": "https://picsum.photos/358/300", "width": 358 },
         { "id": "10", "url": "https://picsum.photos/700/300", "width": 700 },
+        { "id": "11", "url": "https://picsum.photos/200/300", "width": 200 },
+        { "id": "12", "url": "https://picsum.photos/200/300", "width": 200 },
       ]
       ,
     }
@@ -39,10 +41,18 @@ export default {
   <main>
     <div class="p-4">
       <h1>Helium images</h1>
-      <div class="flex flex-wrap flex-row">
-        <DynamicPicture v-for="picture in pictures" :key="picture.id" :custom-margin=4
-          :image-width="picture.width" :picture-data="picture" />
+      <div class="flex flex-wrap flex-row p-8">
+        <DynamicPicture v-for="picture in pictures" :key="picture.id" :custom-margin=4 :image-width="picture.width"
+          :picture-data="picture" />
+        <div class="remain_space_ctrl"></div>
       </div>
     </div>
   </main>
 </template>
+
+<style>
+.remain_space_ctrl {
+  background: transparent;
+  flex-grow: 10000000 !important;
+}
+</style>
